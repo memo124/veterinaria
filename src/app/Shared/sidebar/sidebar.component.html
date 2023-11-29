@@ -1,0 +1,21 @@
+  <!-- Sidebar Content starts -->
+<div class="container-fluid">
+    <!-- <div class="sidebar sidebar-wrapper" > -->
+        <!-- <div class="sidebar-content" > -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" (click)="verVista('inicio');pantalla=1" [ngClass]="pantalla==1?'active':''" >Mascotas</a>
+                </li>
+                <li class="nav-item" >
+                  <a class="nav-link" aria-current="page"  (click)="verVista('citas');pantalla=2" [ngClass]="pantalla==2?'active':''"  >Citas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"  (click)="verVista('historial');pantalla=3" [ngClass]="pantalla==3?'active':''"  >Historial</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page"  (click)="verVista('editarPerfil');pantalla=4" [ngClass]="pantalla==4?'active':''"  >Editar Perfil</a>
+                </li>
+              </ul>
+        <!-- </div> -->
+    <!-- </div> -->
+</div>

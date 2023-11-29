@@ -1,0 +1,102 @@
+<div class="shadow-lg p-3 mb-5 bg-body rounded">
+  <div class="p-4  table-responsive " style="height:550px">
+    <table class=" table align-middle table-bordered border-2 table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre de la mascota</th>
+            <th scope="col">Raza</th>
+            <th scope="col">Tipo de mascota</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <th>1</th>
+            <td>beethoven</td>
+            <td>Beagle</td>
+            <td>Casa</td>
+            <td>
+              <div class="row">
+                <div class="col-12 col-md-4 text-end">
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalMascotas">Ver</button>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                  <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalMascotas">Actualizar</button>
+                </div>
+                <div class="col-12 col-md-4 text-start d-flex align-items-center">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [checked]="activo==true" (click)="activo=true" (dblclick)="activo=false">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">{{activo==true?'Activo':'Inactivo'}}</label>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr >
+            <th>2</th>
+            <td>Nena</td>
+            <td>Hushky - Chao chao - Coli</td>
+            <td>Casa</td>
+            <td>
+              <div class="row">
+                <div class="col-12 col-md-4 text-end">
+                  <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalMascotas">Ver</button>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                  <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#modalMascotas">Actualizar</button>
+                </div>
+                <div class="col-12 col-md-4 text-start d-flex align-items-center">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" [checked]="activo2==true" (click)="activo2=true" (dblclick)="activo2=false">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">{{activo2==true?'Activo':'Inactivo'}}</label>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<div class="p-4">
+  <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalMascotas">Agregar</button>
+</div>
+</div>
+
+
+
+<div class="modal fade" id="modalMascotas" tabindex="-1" aria-labelledby="modalMascotasLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalMascotasLabel">Información de tu mascota</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="cerrarModal"></button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <div class="containter">
+            <div class="row mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="Nombre" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="row mb-3">
+              <label for="raza" class="form-label">Raza</label>
+              <input type="raza" class="form-control" id="raza" placeholder="Raza">
+            </div>
+            <div class="row mb-3">
+              <label for="raza" class="form-label">Tipo de animal</label>
+              <select name="raza" id="raza" class="form-control">
+                <option value="Domestica">Domestica</option>
+                <option value="Salvaje">Salvaje</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="cerrarModal()">Cancelar</button>
+          <button type="button" class="btn btn-primary" (click)="enviarDatos()">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
